@@ -5,7 +5,7 @@ from sqlalchemy import pool
 
 from alembic import context
 from app.models import Base
-import psycopg2-binary as pb
+import psycopg2
 
 # from app.config import settings
 
@@ -15,7 +15,7 @@ import psycopg2-binary as pb
 config = context.config
 config.set_main_option(
     "sqlalchemy.url",
-    "postgresql+pb://postgres:Tir1061985@localhost:5432/fastapi",
+    "postgresql+ppsycopg2://postgres:Tir1061985@localhost:5432/fastapi",
 )
 
 # Interpret the config file for Python logging.
