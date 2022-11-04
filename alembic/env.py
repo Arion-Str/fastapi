@@ -5,7 +5,7 @@ from sqlalchemy import pool
 
 from alembic import context
 from app.models import Base
-import psycopg2
+
 
 # from app.config import settings
 
