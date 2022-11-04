@@ -14,7 +14,7 @@ from app.models import Base
 config = context.config
 config.set_main_option(
     "sqlalchemy.url",
-    "postgresql+(psycopg2-binary)://postgres:Tir1061985@localhost:5432/fastapi",
+    "postgresql+psycopg2+binary://postgres:Tir1061985@localhost:5432/fastapi",
 )
 
 # Interpret the config file for Python logging.
