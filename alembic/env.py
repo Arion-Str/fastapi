@@ -12,7 +12,7 @@ from app.config import settings
 config = context.config
 config.set_main_option(
     "sqlalchemy.url",
-    f"postgresql+psycopg2-binary://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}",
+    "postgresql+psycopg2-binary://postgres:Tir1061985@localhost:5432/fastapi",
 )
 
 # Interpret the config file for Python logging.
