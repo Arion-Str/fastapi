@@ -5,9 +5,7 @@ from sqlalchemy import pool
 
 from alembic import context
 from app.models import Base
-
-
-# from app.config import settings
+from app.config import settings
 
 
 # this is the Alembic Config object, which provides
@@ -15,7 +13,7 @@ from app.models import Base
 config = context.config
 config.set_main_option(
     "sqlalchemy.url",
-    "postgresql+psycopg2-binary://postgres:Tir1061985@localhost:5432/fastapi",
+    f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}",
 )
 
 # Interpret the config file for Python logging.
