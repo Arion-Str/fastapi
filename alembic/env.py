@@ -8,11 +8,10 @@ import psycopg2
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
-psycopg = psycopg2 - binary
 config = context.config
 config.set_main_option(
     "sqlalchemy.url",
-    f"postgresql+{psycopg}://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}",
+    f"postgresql+{psycopg2}://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}",
 )
 
 
