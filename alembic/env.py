@@ -10,7 +10,7 @@ from app.config import settings
 config = context.config
 config.set_main_option(
     "sqlalchemy.url",
-    "postgresql+psycopg2://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:5432/{settings.database_name}",
+    "postgresql+psycopg2://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:5432/{settings.database_name}?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory",
 )
 
 
