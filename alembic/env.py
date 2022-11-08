@@ -9,6 +9,7 @@ from app.config import settings
 # access to the values within the .ini file in use.
 config = context.config
 config.set_main_option(
+    "sqlalchemy.url",
     "postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:5432/{settings.database_name}",
 )
 
